@@ -11,6 +11,17 @@
         #top {
             margin: 30px;
         }
+        /*td>button>a {*/
+            /*color: #fff;*/
+        /*}*/
+        /*td>button>a:focus ,td>button>a:active, td>button>a:hover {*/
+            /*opacity: 0.6;*/
+            /*text-decoration: none;*/
+            /*color: #fff;*/
+        /*}*/
+        th{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -24,25 +35,31 @@
 <div class="container">
     <h2>Posts</h2>
     <p></p>
-    <table class="table table-hover">
+    <table class="table table-hover text-center">
         <thead>
         <tr>
             <th>Name</th>
             <th>Category</th>
             <th>Created at</th>
+            <th style="color: #2a88bd">Options</th>
         </tr>
         </thead>
         <tbody>
-        {{--@foreach()--}}
+        @foreach($posts as $post)
         <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
+            <td>{{$post->post_name}}</td>
+            <td>{{$post->categories->category_name}}</td>
+            <td><?php echo \Carbon\Carbon::createFromTimeStamp(strtotime($post -> created_at))->diffForHumans() ?></td>
+            <td >
+                <a class="btn btn-info btn-md" >View</a>
+                <a class="btn btn-warning btn-md">Edit</a>
+                <a class="btn btn-danger btn-md">Delete</a>
+            </td>
         </tr>
-        {{--@endforeach--}}
+        @endforeach
         </tbody>
     </table>
+    <a class="btn btn-success btn-md"><span class="glyphicon glyphicon-plus"></span> Add Post</a>
 </div>
-
 </body>
 </html>
