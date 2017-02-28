@@ -15,4 +15,9 @@ Route::get('/', function () {
     return view('pages/home');
 })->name('home');
 
-Route::get('blog', [ 'uses' => 'ManagementController@blog','as' => 'blog']);
+Route::get('blog/{category?}', [ 'uses' => 'ManagementController@blog','as' => 'blog']);
+
+Route::get('/add', function () {
+    return view('post/add');
+})->name('add');
+//Route::get('add', [ 'uses' => 'ManagementController@add','as' => 'add']);

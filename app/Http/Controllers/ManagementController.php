@@ -19,8 +19,25 @@ use Validator;
 
 class ManagementController extends Controller
 {
-    public function blog(){
-        $posts = Post::all();
-        return view('pages/blog', array('posts' => $posts));
+    public function blog($category = null){
+        $categories = Category::all();
+        if ($category)
+            if ($category == 'All') {
+
+                $posts = Post::all();
+            } else {
+                $posts = Post::whereHas('categories', function ($q) use ($category) {
+                    $q->where('category_name', $category);
+                })->get();
+            }
+        else
+            $posts = Post::all();
+        return view('pages/blog', array('posts' => $posts,'categories'=>$categories));
+    }
+
+    public function add()
+    {
+        
+        return $this->validatesRequestErrorBag;
     }
 }

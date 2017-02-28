@@ -34,27 +34,27 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #fed136;
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(254, 209, 54, 0.81);
 }
 
 .btn-light {
     border-radius: 0;
-    color: #333;
+    color: #337ab7;
     background-color: rgb(255,255,255);
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
-    color: #333;
-    background-color: rgba(255,255,255,0.8);
+    color: #fff;
+    background-color: #fed136;
 }
 
 /* Custom Horizontal Rule */
@@ -155,7 +155,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/introducing-windows-mobile.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -165,7 +165,7 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 /* Services */
