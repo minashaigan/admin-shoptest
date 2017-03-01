@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>3D Mad Max</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
     </div>
 </header>
 <div class="container">
-    <h2>Posts<span style="float: right;font-size: medium;">filter by
+    <h2>Posts<span style="float: right;font-size: medium;">filter by:
             <div class="dropdown" style="display: inline">
                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
                 <span class="caret"></span></button>
