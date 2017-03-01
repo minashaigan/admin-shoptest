@@ -23,7 +23,7 @@ class UsersModify extends Migration
             $table->string('image')->nullable();
             //$table->boolean('admin')->default('0');
             //$table->integer('role_id')->unsigned()->nullable()->index();
-            //$table->boolean('activated')->default(false);
+            $table->boolean('activated')->default(false);
             //$table->string('api_token')->nullable();
             $table->string('remember_token')->nullable();
 
