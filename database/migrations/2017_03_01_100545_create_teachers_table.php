@@ -25,10 +25,10 @@ class CreateTeachersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
 
-            $table->text('background')->nullable();
+            //$table->text('background')->nullable();
             $table->text('education')->nullable();
-            $table->text('work_ex')->nullable();
-            $table->text('awards')->nullable();
+            //$table->text('work_ex')->nullable();
+            //$table->text('awards')->nullable();
 
             $table->timestamps();
 
