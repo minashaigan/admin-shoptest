@@ -21,8 +21,8 @@ class UsersModify extends Migration
             $table->integer('mobile');
             $table->string('password');
             $table->string('image')->nullable();
-            $table->boolean('admin')->default('0');
-            $table->integer('role_id')->unsigned()->nullable()->index();
+            //$table->boolean('admin')->default('0');
+            //$table->integer('role_id')->unsigned()->nullable()->index();
             //$table->boolean('activated')->default(false);
             //$table->string('api_token')->nullable();
             $table->string('remember_token')->nullable();
@@ -44,13 +44,13 @@ class UsersModify extends Migration
 
         });
 
-        Schema::table('users', function($table) {
-            $table->foreign('role_id')
-                ->references('id')
-                ->on('roles')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');;
-        });
+//        Schema::table('users', function($table) {
+//            $table->foreign('role_id')
+//                ->references('id')
+//                ->on('roles')
+//                ->onUpdate('cascade')
+//                ->onDelete('cascade');;
+//        });
     }
 
     /**
