@@ -21,7 +21,7 @@ class CreateSectionTable extends Migration
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('type');
-            $table->boolean('father');
+            $table->integer('father');
             $table->integer('duration')->default('0');;
             $table->string('image')->nullable();
             //$table->string('link');
