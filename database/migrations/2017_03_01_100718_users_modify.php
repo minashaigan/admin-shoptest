@@ -13,13 +13,13 @@ class UsersModify extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //$table->increments('id');
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
 
-            //$table->string('name');
-            //$table->string('email')->unique();
+            $table->string('name');
+            $table->string('email')->unique();
             $table->integer('mobile');
-            //$table->string('password');
+            $table->string('password');
             $table->string('image')->nullable();
             $table->boolean('admin')->default('0');
             $table->integer('role_id')->unsigned()->nullable()->index();
