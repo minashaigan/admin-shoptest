@@ -47,7 +47,7 @@ class CreateCourseTable extends Migration
         Schema::table('courses', function($table) {
             $table->foreign('category_id')
                 ->references('id')
-                ->on('categorys')
+                ->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
