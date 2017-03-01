@@ -17,7 +17,8 @@ class CreatePackCoursesTable extends Migration
             $table->increments('id');
             $table->integer('course_id')->unsigned();
             $table->integer('pack_id')->unsigned();
-
+            //price
+            //start time
             $table->timestamps();
         });
     }
